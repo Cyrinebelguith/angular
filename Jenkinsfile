@@ -26,6 +26,11 @@ pipeline
          }
       }
     }
+    stage('Push image to DOCKERHUB via ANSIBLE') {
+     script {   
+       sh 'ansible-playbook ansible/docker-registry.yml -i ansible/inventory/host.yml -vvv'
+     }
+   } 
     	
   }
 }

@@ -1,0 +1,6 @@
+- name: Tag and push to docker hub
+  docker_image:
+    name: devops
+    repository: cyrinebelguith/cd-angular
+    tag: latest
+    push: yes
