@@ -4,7 +4,7 @@
   docker_image:
    name: devops
    build: 
-    path: /var/lib/jenkins/workspace/angular
+    path: /home/cyrine/Desktop/angular
     pull: no
    source: build
    state: present
