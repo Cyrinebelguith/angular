@@ -1,10 +1,10 @@
 localhost ansible_connection=local
 
-[Server]
+[server]
 localhost
  
-[Servers:vars]
-ansible_python_interpreter= /usr/bin/python3
-ansible_user=cyrine
+[servers:vars]
+ansible_python_interpreter = /usr/bin/python3
+ansi_user = jenkins
 
 
