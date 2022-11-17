@@ -10,27 +10,22 @@ pipeline
           url: 'https://github.com/Cyrinebelguith/angular.git']]])
 	}
       }
-    }
-		
+    }	
     stage('build') {
-      steps{
-	script{
+     steps{
+        script{
 	  sh "npm ci"
-
-	  sh "ansible-playbook ansible/build.yml  -i /ansible/inventory/host.yml"
-
+	  sh "ansible-playbook ansible/build.yml  -i /ansible/inventory/host.yml -vvv" 
 	}
       }
      }
-    stage('docker') {
-      steps {
-         script{
-         sh "ansible-playbook ansible/docker.yml -i ansible/inventory/host.yml "
+    stage('create image & build docker') {
+     steps {
+        script{
+          sh "ansible-playbook ansible/docker.yml -i ansible/inventory/host.yml -vvv"
          }
       }
-
     }
-
-	    	
+    	
   }
 }
