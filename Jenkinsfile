@@ -17,7 +17,7 @@ pipeline
 	script{
 	  sh "npm ci"
 
-	  sh "ansible-playbook ansible/build.yml  -i /ansible/inventory/host.yml -e -vvv "
+	  sh "ansible-playbook ansible/build.yml  -i /ansible/inventory/host.yml"
 
 	}
       }
