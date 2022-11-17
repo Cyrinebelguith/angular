@@ -4,4 +4,4 @@
   shell: npm install --verbose
   
 - name: Build app
-  shell: ng build --prod  
+  shell: ng build
